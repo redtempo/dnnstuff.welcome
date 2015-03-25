@@ -231,6 +231,24 @@ Namespace DNNStuff.Welcome
         Protected WithEvents txtUnhideText As Global.System.Web.UI.WebControls.TextBox
 
         '''<summary>
+        '''plIpAddressRegEx control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents plIpAddressRegEx As Global.DotNetNuke.UI.UserControls.LabelControl
+
+        '''<summary>
+        '''txtIpAddressRegEx control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents txtIpAddressRegEx As Global.System.Web.UI.WebControls.TextBox
+
+        '''<summary>
         '''cmdUpdate control.
         '''</summary>
         '''<remarks>

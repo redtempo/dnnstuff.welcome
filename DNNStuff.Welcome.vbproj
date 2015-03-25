@@ -225,6 +225,9 @@
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="Version\All\License.html" />
+    <Content Include="Version\All\Version_Current.html">
+      <DependentUpon>Version_Current.md</DependentUpon>
+    </Content>
     <Content Include="Version\Documentation\images\Configuration - Advanced.png" />
     <Content Include="Version\Documentation\images\Configuration - Common.png" />
     <Content Include="Welcome.ascx" />

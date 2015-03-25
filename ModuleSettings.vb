@@ -133,6 +133,9 @@ Namespace DNNStuff.Welcome
             End Set
         End Property
 
+        Private Const SETTING_IPADDRESSREGEX As String = "IpAddressRegEx"
+        Public Property IpAddressRegEx() As String
+
 #End Region
 
 #Region "Methods"
@@ -154,6 +157,7 @@ Namespace DNNStuff.Welcome
             Me.DisplayKeepHidden = DNNUtilities.GetSetting(settings, SETTING_DISPLAYKEEPHIDDEN, "None")
             Me.KeepHiddenText = DNNUtilities.GetSetting(settings, SETTING_KEEPHIDDENTEXT, "Don't show again")
             Me.UnhideText = DNNUtilities.GetSetting(settings, SETTING_UNHIDETEXT, "Show")
+            Me.IpAddressRegEx = DNNUtilities.GetSetting(settings, SETTING_IPADDRESSREGEX, "")
 
             ' using controller for text
             Dim controller As New WelcomeController
@@ -177,6 +181,7 @@ Namespace DNNStuff.Welcome
                 .UpdateModuleSetting(_ModuleId, SETTING_DISPLAYKEEPHIDDEN, _DisplayKeepHidden)
                 .UpdateModuleSetting(_ModuleId, SETTING_KEEPHIDDENTEXT, _KeepHiddenText)
                 .UpdateModuleSetting(_ModuleId, SETTING_UNHIDETEXT, _UnhideText)
+                .UpdateModuleSetting(_ModuleId, SETTING_IPADDRESSREGEX, IpAddressRegEx)
             End With
 
             ' using controller for text

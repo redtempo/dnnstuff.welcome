@@ -105,12 +105,23 @@ Namespace DNNStuff.Welcome
             'End If
             Page.ClientScript.RegisterClientScriptInclude("dnnstuff", ResolveUrl("resources/support/dnnstuff-min.js"))
 
-            RenderModule()
+            If ShouldRenderModule() Then
+                RenderModule()
+            End If
+
 
 #If Config = "Trial" Then
             Common.AddTrialNotice(pnlContent)
 #End If
         End Sub
+
+        Private Function ShouldRenderModule() As Boolean
+            If ModulePermissionController.CanEditModuleContent(ModuleConfiguration) And IsEditable Then Return True
+            If Not String.IsNullOrEmpty(_ms.IpAddressRegEx) Then
+                Return Regex.IsMatch(GetIPAddress(), _ms.IpAddressRegEx)
+            End If
+            Return True
+        End Function
 
         Private Sub InjectText(ByVal s As String)
             Dim c As Control = ParseControl(s)
@@ -265,6 +276,17 @@ Namespace DNNStuff.Welcome
 
             Return True
 
+        End Function
+
+        Public Shared Function GetIPAddress() As String
+            Dim context As System.Web.HttpContext = System.Web.HttpContext.Current
+            Dim sIPAddress As String = context.Request.ServerVariables("HTTP_X_FORWARDED_FOR")
+            If String.IsNullOrEmpty(sIPAddress) Then
+                Return context.Request.ServerVariables("REMOTE_ADDR")
+            Else
+                Dim ipArray As String() = sIPAddress.Split(New [Char]() {","c})
+                Return ipArray(0)
+            End If
         End Function
 
         Private Sub HideModule()

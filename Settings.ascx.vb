@@ -46,6 +46,7 @@ Namespace DNNStuff.Welcome
                 .KeepHiddenText = txtKeepHiddenText.Text
                 .Version = Convert.ToInt32(txtVersion.Text)
                 .UnhideText = txtUnhideText.Text
+                .IpAddressRegEx = txtIpAddressRegEx.Text
             End With
             ms.UpdateSettings()
         End Sub
@@ -64,7 +65,7 @@ Namespace DNNStuff.Welcome
             txtKeepHiddenText.Text = ms.KeepHiddenText
             txtVersion.Text = ms.Version.ToString
             txtUnhideText.Text = ms.UnhideText
-
+            txtIpAddressRegEx.Text = ms.IpAddressRegEx
         End Sub
 #End Region
 

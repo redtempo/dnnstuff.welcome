@@ -63,6 +63,10 @@
                     <dnn:Label ID="plUnhideText" runat="server" ControlName="txtUnhideText" Suffix=":" />
                     <asp:TextBox ID="txtUnhideText" runat="server" Columns="60" TextMode="MultiLine" Rows="2" />
                 </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plIpAddressRegEx" runat="server" ControlName="txtIpAddressRegEx" Suffix=":" />
+                    <asp:TextBox ID="txtIpAddressRegEx" runat="server" Columns="80" />
+                </div>
             </div>
             <div class="tab" id="help">
                 <div>

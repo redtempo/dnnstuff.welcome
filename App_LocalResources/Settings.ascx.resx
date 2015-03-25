@@ -213,4 +213,10 @@
   <data name="plViewsSessionBased.Text" xml:space="preserve">
     <value>Reset View Count after Session Ends</value>
   </data>
+  <data name="plIpAddressRegEx.Help" xml:space="preserve">
+    <value>IP Addresses regular expression to restrict this module to</value>
+  </data>
+  <data name="plIpAddressRegEx.Text" xml:space="preserve">
+    <value>IP Address Restriction</value>
+  </data>
 </root>
