@@ -44,13 +44,14 @@
     <SccProvider>
     </SccProvider>
     <OldToolsVersion>4.0</OldToolsVersion>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
     <TargetFrameworkProfile />
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>..\..\dnn7.dev.com\bin\</OutputPath>
@@ -58,7 +59,8 @@
     <BaseAddress>285212672</BaseAddress>
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
-    <DefineConstants></DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <DebugSymbols>true</DebugSymbols>
@@ -76,7 +78,8 @@
     <BaseAddress>285212672</BaseAddress>
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
-    <DefineConstants></DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <DebugSymbols>false</DebugSymbols>
@@ -91,7 +94,8 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Trial|AnyCPU' ">
     <DefineTrace>true</DefineTrace>
     <OutputPath>..\..\dnn7.dev.com\bin\</OutputPath>
-    <DefineConstants></DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <BaseAddress>285212672</BaseAddress>
     <DocumentationFile>DNNStuff.Welcome.xml</DocumentationFile>
     <Optimize>true</Optimize>
@@ -151,7 +155,7 @@
     <Compile Include="AssemblyInfo.vb">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Compatibility\DNN8\Compatibility.vb" />
+    <Compile Include="Compatibility\DNN6\Compatibility.vb" />
     <Compile Include="Components\Business\Common.vb" />
     <Compile Include="Components\Data\DataProvider.vb" />
     <Compile Include="Components\Data\Info.vb" />
