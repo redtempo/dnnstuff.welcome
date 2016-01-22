@@ -18,7 +18,7 @@ Imports DotNetNuke
 Imports DotNetNuke.Common
 Imports DotNetNuke.Common.Utilities.XmlUtils
 Imports DotNetNuke.Common.Utilities
-Imports DotNetNuke.Services.Search
+
 
 Namespace DNNStuff.Welcome
 

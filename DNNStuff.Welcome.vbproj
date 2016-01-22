@@ -112,7 +112,7 @@
     </Reference>
     <Reference Include="DNNStuff.Utilities, Version=1.1.0.16249, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\BIN\Various\DNNStuff.Utilities.dll</HintPath>
+      <HintPath>D:\TOOLING\BIN\Various\DNNStuff.Utilities.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ApplicationBlocks.Data">
       <Name>Microsoft.ApplicationBlocks.Data</Name>

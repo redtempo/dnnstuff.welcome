@@ -1,10 +1,11 @@
 
-## 02.02.01
+## 02.03.00
 
-25/Mar/2015
+22/Jan/2016
 
-* Enhancements
-    * Added an IP address restriction based on a regular expression match - useful if you only want to show the welcome to a range of IP addresses
 
+* Fixes
+	* Added support for DNN8
+    * Minimum configuration is now DNN 7.1.2+ (.NET 4.0) / DNN 8+ (.NET 4.5)
 
 For additional release history please visit the [documentation](http://docs.dnnstuff.com/pages/welcome).

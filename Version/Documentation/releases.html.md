@@ -1,6 +1,28 @@
 # Welcome Release History 
 
+```Minimum configuration DNN 7.1.2+ (.NET 4.0) / DNN 8+ (.NET 4.5)```
+
+<!-- insert-newversion -->
+
+## 02.03.00
+
+22/Jan/2016
+
+
+* Fixes
+	* Added support for DNN8
+    * Minimum configuration is now DNN 7.1.2+ (.NET 4.0) / DNN 8+ (.NET 4.5)
+
+
+
 ```Minimum configuration DNN 6.0.3+ / DNN 7+ / .NET 3.5```
+
+## 02.02.01
+
+25/Mar/2015
+
+* Enhancements
+    * Added an IP address restriction based on a regular expression match - useful if you only want to show the welcome to a range of IP addresses
 
 ## 02.02.00
 
