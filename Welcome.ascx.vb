@@ -99,20 +99,12 @@ Namespace DNNStuff.Welcome
 
         Private Sub LoadModule()
 
-            'If DotNetNuke.Framework.AJAX.IsInstalled Then
-            '    DotNetNuke.Framework.AJAX.RegisterScriptManager()
-            '    DotNetNuke.Framework.AJAX.WrapUpdatePanelControl(pnlContent, True)
-            'End If
             Page.ClientScript.RegisterClientScriptInclude("dnnstuff", ResolveUrl("resources/support/dnnstuff-min.js"))
 
             If ShouldRenderModule() Then
                 RenderModule()
             End If
 
-
-#If Config = "Trial" Then
-            Common.AddTrialNotice(pnlContent)
-#End If
         End Sub
 
         Private Function ShouldRenderModule() As Boolean
@@ -168,19 +160,6 @@ Namespace DNNStuff.Welcome
                 DotNetNuke.Services.Exceptions.ProcessModuleLoadException(Me, ex)
             End Try
 
-        End Sub
-
-        Sub AppendTrialNotice(ByVal ph As PlaceHolder)
-            Dim sb As New Text.StringBuilder
-
-            sb.Append("<p>Thank you for evaluating <a style=""text-decoration:underline"" target=""_blank"" title=""Welcome"" href=""http://www.dnnstuff.com/welcome.aspx?utm_source=dnnstuff&utm_medium=trial&utm_campaign=welcome"">Welcome</a>. If after your evaluation you wish to support great DotNetNuke software, please visit the store to <a style=""text-decoration:underline"" target=""_blank"" title=""DNNStuff"" href=""http://www.dnnstuff.com/store.aspx?utm_source=dnnstuff&utm_medium=trial&utm_campaign=welcome"">purchase a membership</a>. Use discount code <strong>'TRIAL'</strong> at checkout for 10% off!</p><hr />")
-
-            Dim ctrl As New HtmlControls.HtmlGenericControl("div")
-            With ctrl
-                .InnerHtml = sb.ToString
-                .Attributes.Add("style", "display:block;visibility:visible;color:black;position:relative;left:0;top:0;margin:0;padding:0;font:1.0em;line-height:1;")
-            End With
-            ph.Controls.Add(ctrl)
         End Sub
 
         Private Function AppendHide(ByVal s As String) As String

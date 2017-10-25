@@ -52,9 +52,12 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\dnn7.dev.com\bin\</OutputPath>
+    <OutputPath>..\..\sites\dnn7.dnndev.me\bin\</OutputPath>
     <DocumentationFile>DNNStuff.Welcome.xml</DocumentationFile>
     <BaseAddress>285212672</BaseAddress>
     <ConfigurationOverrideFile>
@@ -73,7 +76,7 @@
     <DebugType>full</DebugType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>..\..\dnn7.dev.com\bin\</OutputPath>
+    <OutputPath>..\..\sites\dnn7.dnndev.me\bin\</OutputPath>
     <DocumentationFile>DNNStuff.Welcome.xml</DocumentationFile>
     <BaseAddress>285212672</BaseAddress>
     <ConfigurationOverrideFile>
@@ -93,7 +96,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Trial|AnyCPU' ">
     <DefineTrace>true</DefineTrace>
-    <OutputPath>..\..\dnn7.dev.com\bin\</OutputPath>
+    <OutputPath>..\..\sites\dnn7.dnndev.me\bin\</OutputPath>
     <DefineConstants>
     </DefineConstants>
     <BaseAddress>285212672</BaseAddress>
@@ -104,21 +107,15 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetNuke">
-      <Name>DotNetNuke</Name>
-      <HintPath Condition=" '$(DNNVERSION)' == 'DNN7' ">J:\TOOLING\BIN\DotNetNuke7\DotNetNuke.dll</HintPath>
-      <HintPath Condition=" '$(DNNVERSION)' == 'DNN8' ">J:\TOOLING\BIN\DotNetNuke8\DotNetNuke.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="DNNStuff.Utilities, Version=1.1.0.16249, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>J:\TOOLING\BIN\Various\DNNStuff.Utilities.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ApplicationBlocks.Data">
-      <Name>Microsoft.ApplicationBlocks.Data</Name>
-      <HintPath Condition=" '$(DNNVERSION)' == 'DNN7' ">J:\TOOLING\BIN\DotNetNuke7\Microsoft.ApplicationBlocks.Data.dll</HintPath>
-      <HintPath Condition=" '$(DNNVERSION)' == 'DNN8' ">J:\TOOLING\BIN\DotNetNuke8\Microsoft.ApplicationBlocks.Data.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="DotNetNuke, Version=7.2.0.613, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Core.7.2.0.613\lib\net40\DotNetNuke.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ApplicationBlocks.Data.2.0.0\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic">
       <Name>Microsoft.VisualBasic</Name>
@@ -200,10 +197,6 @@
     <Content Include="Settings.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
-    <Content Include="Version\All\License.html" />
-    <Content Include="Version\All\Version_Current.html">
-      <DependentUpon>Version_Current.md</DependentUpon>
-    </Content>
     <Content Include="Version\Documentation\images\Configuration - Advanced.png" />
     <Content Include="Version\Documentation\images\Configuration - Common.png" />
     <Content Include="Welcome.ascx" />
@@ -222,10 +215,10 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Build\Build.bat" />
-    <None Include="Build\BuildFinal.bat" />
-    <None Include="Build\DeployFinal.bat" />
     <None Include="Build\ModuleSpecific.targets" />
-    <Content Include="Version\All\Version_Current.md" />
+    <Content Include="LICENSE" />
+    <Content Include="README.md" />
+    <None Include="packages.config" />
     <None Include="Version\All\Welcome.dnn" />
     <None Include="Version\Data\01.01.03.SqlDataProvider" />
     <None Include="Version\Data\Uninstall.SqlDataProvider" />
@@ -258,12 +251,12 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1124</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://dnn7.dev.com/DesktopModules/DNNStuff - Welcome</IISUrl>
+          <IISUrl>http://dnn7.dnndev.me/DesktopModules/DNNStuff - Welcome</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
-          <IISAppRootUrl>http://dnn7.dev.com</IISAppRootUrl>
+          <IISAppRootUrl>http://dnn7.dnndev.me</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>http://dnn7.dev.com/</CustomServerUrl>
+          <CustomServerUrl>http://dnn7.dnndev.me/</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
@@ -271,4 +264,11 @@
   </ProjectExtensions>
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Import Project="packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets" Condition="Exists('packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets'))" />
+  </Target>
 </Project>
