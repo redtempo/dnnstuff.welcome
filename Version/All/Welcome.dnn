@@ -16,7 +16,7 @@
 				<dependency type="CoreVersion">05.02.03</dependency>
 			</dependencies>
 			<components>
-				<component type="Modul e">
+				<component type="Module">
 					<desktopModule>
 						<moduleName>DNNStuff - Welcome</moduleName>
 						<foldername>DNNStuff - Welcome</foldername>
