@@ -7,7 +7,7 @@ A DNN module whose visibility can be controlled by the site visitor
 Current releases support DNN 7.2.0 and later
 
 ## Releases
-[Releases](/releases)
+[Releases](https://github.com/redtempo/dnnstuff.welcome/releases)
 
 ## Documentation
 [Documentation](https://redtempo.github.io/dnnstuff.welcome/)
