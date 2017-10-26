@@ -15,5 +15,5 @@ experience.
 
 ## Advanced Topics
 
-* [Tokens](Tokens)
+* [Tokens](tokens)
 
