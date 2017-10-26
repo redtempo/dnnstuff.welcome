@@ -1,12 +1,3 @@
-'***************************************************************************/
-'* Copyright (c) 2007 by DNNStuff.
-'* All rights reserved.
-'*
-'* Date:        March 19,2007
-'* Author:      Richard Edwards
-'* Description: DotNetNuke Module for displaying a Welcome message
-'*************/
-
 Imports DotNetNuke
 Imports DotNetNuke.Services.Localization
 Imports System.Text.RegularExpressions

@@ -3,7 +3,7 @@
 		<package name="DNNStuff - Welcome" type="Module" version="">
 			<friendlyName>DNNStuff - Welcome</friendlyName>
 			<description>The welcome module allows you to specify a welcome message to new users for a specific number of page views</description>
-			<owner>
+      <owner>
         <name>Richard Edwards</name>
         <organization>Red Tempo Software Inc.</organization>
         <url>http://www.github.com/redtempo</url>
@@ -13,7 +13,7 @@
       <releaseNotes src="Release.html" />
 			<azureCompatible>true</azureCompatible>
 			<dependencies>
-				<dependency type="CoreVersion">05.02.03</dependency>
+				<dependency type="CoreVersion">07.02.00</dependency>
 			</dependencies>
 			<components>
 				<component type="Module">
