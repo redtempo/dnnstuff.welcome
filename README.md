@@ -1,3 +1,5 @@
+<mark>IMPORTANT: This project is not being maintained going forward. If you are interested in taking over this repo, please open an issue and I'll make arrangements for the transfer</mark>
+
 # Welcome Module for DNN (DotNetNuke)
 
 A DNN module whose visibility can be controlled by the site visitor
